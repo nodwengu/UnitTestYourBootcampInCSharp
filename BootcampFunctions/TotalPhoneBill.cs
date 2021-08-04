@@ -4,12 +4,13 @@ namespace BootcampFunctions
 {
     public class TotalPhoneBill
     {
-        public static string CalcTotalPhoneBill(string callsAndSms)
+         public string CalcTotalPhoneBill(string callsAndSms)
         {
-            var callsAndSmsArr = callsAndSms.Split(", ");
+            var callsAndSmsArr = callsAndSms.Split(",");
 
-            var callsTotal = 0.0;
-            var smsTotal = 0.0;
+            double callsTotal = 0.0;
+            double smsTotal = 0.0;
+
 
             foreach (var item in callsAndSmsArr) {
                if (item == "call") {
@@ -19,6 +20,8 @@ namespace BootcampFunctions
                   smsTotal += 0.65;
                }
             }
+            // Console.WriteLine("callsTotal " + callsTotal);
+            // Console.WriteLine("smsTotal " + smsTotal);
             return $"R{callsTotal + smsTotal}";
         }
     }
