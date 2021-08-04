@@ -19,7 +19,7 @@ namespace BootcampFunctions
                   smsTotal += 0.65;
                }
             }
-            return "R" + (callsTotal + smsTotal);
+            return $"R{callsTotal + smsTotal}";
         }
     }
 }
