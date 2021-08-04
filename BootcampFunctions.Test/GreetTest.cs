@@ -17,5 +17,11 @@ namespace BootcampFunctions.Test
         {
             Assert.Equal("Hello, Lihle", Greet.Execute("Lihle"));
         }
+
+        [Fact]
+        public void ShouldBeAbleToGreetThando()
+        {            
+            Assert.Equal("Hello, Thando", Greet.Execute("Thando"));
+        }
     }
 }
